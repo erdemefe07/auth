@@ -1,0 +1,49 @@
+{
+  "name": "serverjs",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./bin/www",
+    "test": "cross-env NODE_ENV=test jest -i --detectOpenHandles --logHeapUsage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/$1",
+      "@routes": "<rootDir>/routes",
+      "@middlewares": "<rootDir>/middlewares",
+      "@models": "<rootDir>/models",
+      "@redis": "<rootDir>/bin/redis"
+    }
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-async-handler": "^1.1.4",
+    "express-validator": "^6.10.0",
+    "helmet": "^4.4.1",
+    "ioredis": "^4.27.1",
+    "jsonwebtoken": "^8.5.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.12.4",
+    "nanoid": "^3.1.22",
+    "request-ip": "^2.1.3"
+  },
+  "_moduleAliases": {
+    "@": ".",
+    "@routes": "routes",
+    "@middlewares": "middlewares",
+    "@models": "models",
+    "@redis": "bin/redis",
+    "@helpers": "helpers"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "mongodb-memory-server": "^6.9.6",
+    "supertest": "^6.1.3"
+  }
+}

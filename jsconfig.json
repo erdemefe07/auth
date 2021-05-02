@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@": [
+        "."
+      ],
+      "@routes": [
+        "routes"
+      ],
+      "@middlewares": [
+        "middlewares"
+      ],
+      "@models": [
+        "models"
+      ],
+      "@redis": [
+        "bin/redis"
+      ],
+      "@helpers": [
+        "helpers"
+      ]
+    },
+  },
+  "exclude": ["node_modules"]
+}
